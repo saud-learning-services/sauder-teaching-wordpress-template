@@ -1,0 +1,2965 @@
+@font-face {
+    font-family: 'Stag-Thin';
+    src: url('https://blogs.ubc.ca/wp-content/fonts/Stag-Thin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Stag-Medium-Web';
+    src: url('https://blogs.ubc.ca/wp-content/fonts/Stag-Medium-Web.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Stag-Semibold';
+    src: url('https://blogs.ubc.ca/wp-content/fonts/Stag-Semibold.woff2') format('woff2');
+}
+
+
+html {
+    scroll-padding-top: 100px; /* fixes sticky nav bar covering page anchors */
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.75rem;
+    color: #5B6770;
+    --sauder-color-blue-light: #1B365D;
+    --sauder-color-blue-dark: #002145;
+    --sauder-color-grey-dark: #5B6770;
+    --sauder-color-grey-light: #C1C6C8;
+    --sauder-color-yellow: #FEDD00;
+    --sauder-color-green-dark: #319B42;
+    --sauder-color-green-dark-65K: #004B1A;
+    --sauder-color-green-dark-40K: #B2D780;
+    --sauder-color-blue-sky: #00B5E2;
+    --sauder-color-blue-sky-65K: #00565E;
+    --sauder-color-blue-sky-40K: #ACE1F4;
+    --sauder-color-green: #7BBE20;
+    --sauder-color-green-65K: #1F5A19;
+    --sauder-color-green-40K: #CBE4A9;
+}
+
+li {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #002145;
+}
+
+/* colour accent change */
+a {color: var(--sauder-color-blue-sky);}
+
+blockquote {
+    border-color: var(--sauder-color-blue-sky) !important;
+}
+
+:root .has-accent-color {
+    color: var(--sauder-color-blue-sky) !important;
+}
+
+.color-accent, .color-accent-hover:focus, .color-accent-hover:hover {
+    color: var(--sauder-color-blue-sky) !important;
+    }
+
+.border-color-accent, .border-color-accent-hover:focus, .border-color-accent-hover:hover {
+    border-color: var(--sauder-color-blue-sky) !important;
+}
+
+/* */
+
+
+/* begin - block-cover treatment*/
+/* #### Make sure the main menu is above all the content #### */
+.wp-block-cover-image.has-background-dim:not(.has-background-gradient)::before, .wp-block-cover-image .wp-block-cover__gradient-background, .wp-block-cover.has-background-dim:not(.has-background-gradient)::before, .wp-block-cover .wp-block-cover__gradient-background {
+    z-index: -1;
+}
+
+/* #### Cover card block with 30|70 columns for Content Heavy template */
+/*      (TOC left, Title & excerpt right) dark background for left side #### */
+.cover-background-card {
+    background: linear-gradient(90deg, #002145 30%, transparent 30%) no-repeat;
+    box-shadow: 4px 3px 8px 1px #969696;
+}
+
+.cover-background-card-tech-page {
+    background: linear-gradient(90deg, var(--sauder-color-green-dark-65K) 30%, transparent 30%) no-repeat !important;
+    box-shadow: 4px 3px 8px 1px #969696;
+}
+
+/* adjust height and margins*/
+.wp-block-cover .has-background-background-color .has-background-dim .cover-background-card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wp-block-cover:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter) {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.wp-block-cover__inner-container {
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+
+.wp-block-column > :first-child {
+    margin-top: 3rem;
+}
+
+.cover-onthispage {
+    font-family: 'Open Sans', Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.7rem;
+    font-variant: small-caps;
+    line-height: 1.5rem;
+    margin-left: 0;
+}
+
+.cover-onthispage {
+    color: var(--sauder-color-blue-sky-40K) !important;
+}
+  
+.cover-page-links {
+    padding-left: 0;
+    margin-top: 3.0rem;
+    margin-left: 0;
+    list-style-type: none;
+    color: #fff;
+}
+
+.cover-page-links li {
+    font-family: 'Open Sans', Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    margin-left: 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cover-page-links li a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px dotted #c1c6c8;
+}
+
+.cover-page-links li a:hover {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid #c1c6c8;
+}
+
+.cover-background-card {
+    border-radius: 30px;
+}
+
+.wp-block-cover-image.has-background-dim::before, .wp-block-cover.has-background-dim::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wp-block-buttons > .wp-block-button:last-child {
+    margin-left: auto;
+}
+
+.wp-block-cover h2 {
+    font-family: 'Stag-Medium-Web', 'Open-Sans';
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    word-wrap: break-word;
+}
+
+.wp-block-cover p {
+    font-family: 'Open Sans', Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+.wp-block-cover .wp-block-cover__inner-container {
+    z-index: 0;
+}
+
+/* cover background handle various screen sizes */
+@media screen and (min-width: 950px){
+          .cover-background-card {
+           background: linear-gradient(90deg, var(--sauder-color-blue-dark) 28rem, transparent 28rem) no-repeat;
+}
+          .cover-background-card-tech-page {
+           background: linear-gradient(90deg, var(--sauder-color-green-65K) 28rem, transparent 28rem) no-repeat;
+}
+}
+
+@media screen and (max-width: 949px){
+          .cover-background-card {
+           background: linear-gradient(90deg, var(--sauder-color-blue-dark) 25rem, transparent 25rem) no-repeat;
+
+}
+          .cover-background-card-tech-page {
+           background: linear-gradient(90deg, var(--sauder-color-green-65K) 27rem, transparent 27rem) no-repeat !important;
+}
+}
+
+@media screen and (max-width: 880px){
+
+          .cover-background-card-tech-page {
+           background: linear-gradient(90deg, var(--sauder-color-green-65K) 25rem, transparent 25rem) no-repeat !important;
+}
+}
+
+@media screen and (max-width: 600px){
+              .cover-background-card {
+           background: linear-gradient(180deg, var(--sauder-color-blue-dark) 34rem, transparent 34rem) no-repeat;
+}
+              .cover-background-card-tech-page {
+           background: linear-gradient(180deg, var(--sauder-color-green-65K) 34rem, transparent 34rem) no-repeat !important;
+}
+}
+
+@media screen and (max-width: 781px){
+.status-area-col:nth-of-type(2) { 
+    border-right: none;
+} 
+}
+
+@media screen and (max-width: 599px){
+.status-area-col:nth-of-type(1), .status-area-col:nth-of-type(3) { 
+    border-right: none;
+}
+}
+
+@media screen and (max-width: 791px){
+ .tech-cover-logo {
+    float: none !important;
+    display: block;
+} 
+}
+
+@media screen and (max-width: 781px) {
+ body.home .page h1.entry-title {
+ font-size:1.5em;
+ line-height:1.0em;
+ min-width:200px
+}
+}
+/*... cover background handle various screen sizes */
+
+/* block-cover for Technology Page (changes from above) */
+.tech-cover-logo {
+/*    display: flex;
+    padding-left: calc(100% - 15rem);*/
+    float: right;
+    padding: 5px 3rem;
+}
+
+.cover-title-tech-page {
+    margin:1.5rem 0 1rem;
+}
+
+.wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter) {
+    margin-top: 0;}
+/* end - block-cover treatment (except background for different screen sizes below */
+
+/* #### Status area on Tech Page  */
+
+.status-area-columns p{
+    margin-top: -1rem !important;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3rem !important;
+}
+
+.status-area-col { 
+    border-right: 2px dotted var(--sauder-color-grey-light);
+}
+
+.status-area-col:nth-of-type(4) { 
+    border-right: none;
+}
+
+.status-area-col:nth-of-type(3) p { 
+    
+}
+
+.wp-block-columns.has-background {
+    padding: .7em .5em;
+}
+
+.status-area-columns .status-area-4-col {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    }
+
+.tech-status{
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+}
+
+.tech-status-icon-sauder-use::before {
+    font-family: 'Material Icons';
+    content: "\f02e";
+    font-size: 48px;
+}
+
+.tech-status-icon-canvas::before {content: "\efec";
+    font-family: 'Material Icons';
+    font-size: 48px;
+    }
+
+.tech-status-icon-servicestatus::before {
+    font-family: 'Material Icons';
+    content: "\e565";
+    font-size: 48px;
+}
+
+.tech-status-icon-support::before {
+    font-family: 'Material Icons';
+    content: "\e8fd";
+    font-size: 48px;
+}
+
+.tech-page-status-info-text::after {
+    font-family: 'Material Icons';
+    content: "\e89e";
+    font-size: 12px;
+}
+
+/* end - status area on tech page */
+
+
+/* UBC Tabs - style changes ---------------------------*/
+
+.wp-block-ubc-tabs {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ubc-sauder-tab-block-green ul, .ubc-sauder-tab-block-blue ul {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    }
+
+/* Sauder Green */
+.ubc-sauder-tab-block-green .ubc-accordion-tabs__tab-list li a[role="tab"]::before, .ubc-accordion-tabs__tab-list li button[role="tab"]::before{
+    background: var(--sauder-color-green-dark);
+}
+
+.ubc-sauder-tab-block-green .ubc-accordion-tabs__tab-list li a[role="tab"], .ubc-accordion-tabs__tab-list li button[role="tab"] a{
+    color: var(--sauder-color-green-dark);
+}
+/*      mobile version at 767px width */
+.ubc-sauder-tab-block-green .ubc-accordion-tabs__tabs-panel.is-open .ubc-accordion-tabs__accordion-trigger {
+    background: var(--sauder-color-green-dark);
+}
+.ubc-sauder-tab-block-green .ubc-accordion-tabs__tabs-panel.is-hidden .ubc-accordion-tabs__accordion-trigger {
+    background: var(--sauder-color-green-65K);   
+}
+.wp-block-ubc-tab {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    }
+
+/* Sauder Blue */
+.ubc-sauder-tab-block-blue .ubc-accordion-tabs__tab-list li a[role="tab"]::before, .ubc-accordion-tabs__tab-list li button[role="tab"]::before{
+    background: var(--sauder-color-blue-dark);}
+
+.ubc-sauder-tab-block-blue .ubc-accordion-tabs__tab-list li a[role="tab"], .ubc-accordion-tabs__tab-list li button[role="tab"] a{
+    color: var(--sauder-color-blue-dark);
+}
+/*      mobile version at 767px width */
+.ubc-sauder-tab-block-blue .ubc-accordion-tabs__tabs-panel.is-open .ubc-accordion-tabs__accordion-trigger {
+    background: var(--sauder-color-blue-sky-65K);
+}
+.ubc-sauder-tab-block-blue .ubc-accordion-tabs__tabs-panel.is-hidden .ubc-accordion-tabs__accordion-trigger {
+    background: var(--sauder-color-blue-dark);   
+}
+
+/* ## DAP Prep Course curriculum - tabs styling */
+
+.dap-curriculum-tabs {
+    --ubc-tabs-block-tab-nav-top-border-background: transparent;
+    --ubc-tabs-block-tab-nav-background: #002145; /* alt: #C1C6C8 */
+    --ubc-tabs-block-tab-nav-text-color: #fff;
+    --ubc-tabs-block-tab-nav-selected-background: #002145;
+    --ubc-tabs-block-tab-nav-selected-text-color: #fff;
+    --ubc-tabs-block-tab-nav-border-color: transparent;
+    --ubc-tabs-block-content-border-color: #c1c6c8;
+    --ubc-tabs-block-accordion-trigger-background: #002145;
+    --ubc-tabs-block-accordion-trigger-selected-background: #00B5E2;
+}
+
+.ubc-accordion-tabs__tab-list li a[role=tab], .ubc-accordion-tabs__tab-list li button[role=tab] {
+    padding: 1rem 3rem;
+    opacity: 0.5;
+}
+
+.ubc-accordion-tabs__tab-list li a[role=tab]:hover {
+    background: #1B365D;
+    opacity: 1;
+}
+
+.active, .sauder-subaccordion:hover{color: var(--sauder-color-grey-dark) !important;} /* fixing text color */
+
+
+/* ## Rights and responsibilities tabs styling */
+
+.rights-tabs {
+    --ubc-tabs-block-tab-nav-top-border-background: transparent;
+    --ubc-tabs-block-tab-nav-background: #002145;
+    --ubc-tabs-block-tab-nav-text-color: #fff;
+    --ubc-tabs-block-tab-nav-selected-background: #002145;
+    --ubc-tabs-block-tab-nav-selected-text-color: #fff;
+    --ubc-tabs-block-tab-nav-border-color: transparent;
+    --ubc-tabs-block-content-border-color: #c1c6c8;
+    --ubc-tabs-block-accordion-trigger-background: #002145;
+    --ubc-tabs-block-accordion-trigger-selected-background: #00B5E2;
+}
+
+.rights-tabs .ubc-accordion-tabs__tab-list li a[role=tab], .rights-tabs .ubc-accordion-tabs__tab-list li button[role=tab] {
+    padding: 1rem 1.75rem;
+    font-size: 1.6rem;
+}
+
+.rights-tabs .ubc-accordion-tabs__tab-list li a[role=tab]:hover {
+    background: #1B365D;
+    opacity: 1;
+}
+
+.rights-tabs .ubc-accordion-tabs__tab-list {
+    flex-wrap: wrap;
+}
+
+.rights-tabs .ubc-accordion-tabs__tabs-panel .content {
+    padding: 1.25rem 0.5rem;
+    border-style: none;
+}
+    
+
+
+/* ### end ### - UBC Tabs - style changes -------------*/
+
+/* ## student systems flowchart -- testing ## */
+
+.stu-sys-container {
+    justify-content: space-between;
+    /* align-items: flex-start !important;*/
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    align-items: stretch !important;
+}
+
+.stu-sys-container a {
+    text-decoration: none;
+}
+
+.stu-sys-container a:hover {
+    text-decoration: underline;
+}
+
+.stu-sys-block {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #78BE20;
+    border-radius: 30px;
+    padding: 24px;
+    max-width: 36rem;
+    margin-top: 1.5rem !important;
+}
+
+.stu-sys-block h4, .stu-sys-block-even h4 {
+    color: #00B5E2;
+    font-size: 24px;
+    margin: 0 0 1rem !important;
+}
+
+.stu-sys-block-even {
+    display: flex;
+    border: 2px solid #78BE20;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 1.5rem !important;
+    max-width: 48%;
+    align-items: center;
+}
+
+.stu-sys-lines-alt-full {
+    border: 3px solid #78BE20;
+    border-top: none;
+    width: 52%;
+    margin: 1.5rem auto 0 auto;
+}
+
+.stu-sys-lines-alt-full td {
+    border-bottom: 3px solid #78BE20;
+    border-top: none;
+    border-right: 3px solid #78BE20;
+    border-left: 3px solid #78BE20;
+    padding-top: 8rem;
+}
+
+.stu-sys-lines-vert {
+    border: none;
+    width: 5%;
+    margin: 0 auto 0 auto;
+}
+
+.stu-sys-lines-vert td {
+    border: none;
+}
+
+.stu-sys-lines-vert::after {
+    content: '';
+    position: absolute;
+    border: solid #78BE20;
+    border-width: 0 3px 3px 0;
+    padding: 7px;
+    transform: translate(11px, -16px) rotate(45deg);
+}
+
+.stu-sys-lines-a-full {
+    border: none;
+    width: 10rem;
+    margin-bottom: 0;
+}
+
+.stu-sys-lines-a-full:after {
+    content: '';
+    position: absolute;
+    border: solid #78BE20;
+    border-width: 0 3px 3px 0;
+    padding: 7px;
+    transform: translate(41px, -16px) rotate(45deg);
+}
+    
+
+.stu-sys-lines-a-full th {
+    border-bottom: 3px solid #00B5E2;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.stu-sys-lines-a-full td {border: none;}
+
+.stu-sys-text-a {
+    color: #319B42;
+    margin: 3rem auto 0 auto;
+    text-align: center;
+    padding: 0 10px 0 10px;
+    max-width: 45rem;
+}
+
+.stu-sys-lines-b-full {
+    border: 3px solid #78BE20;
+    border-bottom: none;
+    margin: 1.5rem auto 0 auto;
+    width: 52%;
+}
+
+.stu-sys-text p {
+    color: #319B42;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 17px 0 17px;
+}
+
+/*.stu-sys-lines-b-full::before {
+    content: '';
+    position: absolute;
+    border: solid #00B5E2;
+    border-width: 0 3px 3px 0;
+    padding: 7px;
+    transform: translate(-10px, 36px) rotate(45deg);
+}
+
+.stu-sys-lines-b-full::after {
+    content: '';
+    position: absolute;
+    border: solid #00B5E2;
+    border-width: 0 3px 3px 0;
+    padding: 7px;
+    transform: translate(416px, -16px) rotate(45deg);
+}
+
+@media (max-width:950px){
+    .stu-sys-block, .stu-sys-lines-a-full, .stu-sys-lines-b-full {display: none;}
+}*/
+
+/* end student systems testing */
+
+
+p:empty{
+    display: none;    
+}
+
+.has-drop-cap:not(:focus)::first-letter, .entry-content .wp-block-cover-image p, .entry-content .wp-block-pullquote {
+        font-family: 'Lobster Two', cursive, "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;}
+
+.home .post-inner {
+    padding-top: 2rem;
+}
+
+.home .search-toggle-wrapper {
+    display: block;
+}
+
+.desktop-search-toggle {
+  color: #001245 !important;  
+}
+
+.wp-block-search__label {
+    display: none;
+}
+
+.wp-block-search__button {
+    font-weight: 200;
+    font-size: 1.55rem;
+    padding: 0 17px;
+}
+
+.wp-block-search__inside-wrapper {
+    /* padding: 20px; */
+    max-width: 60rem;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__button {
+    padding: .45em .8em;
+    }
+    
+.wp-block-search .wp-block-search__input {
+    font-family: 'Open Sans', Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.header-inner .toggle-wrapper::before {
+    width: 0;
+}
+
+/*.site-title {
+    padding-right: 10px;
+}
+
+.site-title::after {
+    content: '|';
+    position: absolute;
+    color: #999;
+    left: 280px;
+    top: 32px;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+@media (max-width: 1536px){
+    .site-title::after {
+        display: none;
+    }
+}*/
+
+.site-description {
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+}
+
+/* .site-description::before {
+    content: '|';
+    font-size: 26px;
+    font-weight: 100;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 1550px){
+    .site-description::before {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1526px){
+    .site-description::before {
+        display: none;
+    }
+} */
+
+.site-logo a, .site-logo img {
+    display: block;
+}
+
+.site-logo img {
+    max-height: 5rem;
+    object-fit: contain;
+}
+
+.custom-logo {
+    height: 90%;
+}
+
+#site-header {
+    background-color: white;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+
+body:not(.overlay-header) .primary-menu > li > a {
+    color: #002145;
+    padding-right: 0;
+}
+
+body:not(.overlay-header) .sub-menu > li {
+/*    color: #002145 !important;*/
+    font-size: 1.4rem;
+    background-color: #f8f8f8;
+}
+
+.sub-menu ul:hover {
+    background-color: #f8f8f8 !important;
+}
+
+.menu-item {
+    color: #001245;
+}
+
+#menu-item-2440 a {
+    color: #319B42;
+}
+
+.mobile-menu  ul li {
+    color: #fff ;
+}
+
+.mobile-menu .sub-menu > li {
+    background-color: #fff !important;
+    font-size: 1.6rem !important;
+}
+
+.modal-menu a {
+    color: #002145 !important;
+}
+
+.modal-menu a:hover {
+    text-decoration: underline;
+}
+
+ul.primary-menu {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: -0.8rem -3rem 0 -1.6rem;
+/*    letter-spacing: -.09rem; */
+    line-height: 1.5;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+}
+
+.primary-menu ul a {
+    text-align: left
+}
+
+
+body:not(.home) .entry-header {
+    padding: 0 0;
+}
+
+body.home .entry-header {
+    padding: 0;
+}
+.toggle-icon {
+    color: #001245;
+}
+
+.wp-block-button__link {
+    color: #319B42;
+    background: #319B42;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+body:not(.overlay-header) .primary-menu > li > .icon {
+    color: #fff;
+    display: none;
+    width: 0;
+}
+
+body:not(.overlay-header) .primary-menu ul {
+    background-color: #f8f8f8;
+    border-radius: 0;
+}
+
+body:not(.overlay-header) .primary-menu > li > ul::after {
+    border-bottom-color: #f8f8f8;
+    display: none;
+}
+
+.entry-header-inner .section-inner .medium {
+    margin-top: 1.0em;
+}
+
+body.home .page .entry-title {
+    font-family: 'Stag-Semibold', Arial, sans-serif;
+    letter-spacing: 0.09rem;
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.1em;
+    min-width: 300px;
+    
+}
+
+body:not(.home) .page .entry-title {
+    display: none;
+}
+
+.section-inner.medium {
+    max-width: 200rem;
+}
+
+.post-inner {
+    margin-top: 2px;
+}
+
+body:not(.home) .post-inner {
+    padding: .1rem;
+}
+
+.unclickable > a {
+    pointer-events: none;
+}
+
+.page-header-image {
+    margin-top: 0;
+    margin-bottom: 4rem;
+    max-width: 100vw !important;
+    position: relative;
+    width: 100% !important;
+}
+
+.post-header-image {
+    margin-top: 0;
+    margin-bottom: 4rem;
+    max-width: 100vw !important;
+    position: absolute;
+    top: 100px;
+    width: 100% !important;
+}
+
+.header-border:after {
+    content: '';
+    width: 100%;
+    z-index: 1;
+    background-image: url(https://blogs.ubc.ca/ubcdapsandbox/files/2022/06/headerborder-test2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    bottom: -14%;
+    height: 35%;
+    transform: scaleY(0.75);
+    background-position: 0 0;
+}
+
+/* ## text over image ## */
+/*
+.page-header-image-text {
+  font-size: clamp(2rem, 6vw, 6rem);
+  font-family: 'Stag-Semibold', 'Open Sans', Arial, Helvetica;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #454545;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  overflow-wrap: normal;
+  box-sizing: border-box;
+  padding: 0 2vw;
+}
+
+.home-subheader {
+    font-size: clamp(1.4rem, 35vw, 3rem);
+    letter-spacing: normal;
+    font-style: italic;
+    top: 68%;
+    font-family: 'Open Sans', Arial, Helvetica;
+    font-weight: 700;
+}
+*/
+
+/* === HEADER: "Learning Services Teaching Toolkit" === */
+.page-header-image-text {
+  /* positioning: keep what you have */
+  font-family: 'Stag-Semibold', 'Open Sans', Arial, Helvetica;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;         /* keep single-line requirement */
+  text-shadow: 1px 1px 5px #454545;
+
+  /* 1) Fluid but safer font scaling for a long string */
+  font-size: clamp(1rem, 4.8vw, 5.25rem);
+  /*  - min 1rem (~16px) lets the 35-char title fit 320–360px wide phones
+      - 4.8vw is a gentler slope than 6–10vw
+      - max 5.25rem keeps it impactful on desktop without blowing past the image */
+
+  /* 2) Fluid, modest tracking (was 0.3rem which grows too fast) */
+  letter-spacing: clamp(0em, 0.03em, 0.04em);
+  /* You can leave this as a fixed 0.02–0.03em if you prefer */
+
+  /* 3) Tight line-height for single-line titles */
+  line-height: 1.05;
+
+  /* 4) Padding that doesn't scale with viewport (breaks the proportional lock) */
+  box-sizing: border-box;
+  padding-left: clamp(10px, 1rem, 16px);
+  padding-right: clamp(10px, 1rem, 16px);
+}
+
+/* Tiny-screen nudge: let it shrink a little faster under ~420px */
+@media (max-width: 420px) {
+  .page-header-image-text {
+    font-size: clamp(0.95rem, 6.2vw, 5.25rem);
+    /* Small increase in slope so the text ducks under the limit sooner */
+    letter-spacing: 0.02em; /* slightly tighter to help on very small widths */
+  }
+}
+
+/* === SUBHEADER: "Exchange, Inspire, Innovate" === */
+.home-subheader {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+  font-style: italic;
+  font-family: 'Open Sans', Arial, Helvetica;
+  font-weight: 700;
+  box-sizing: border-box;
+  padding-left: clamp(8px, 0.75rem, 14px);
+  padding-right: clamp(8px, 0.75rem, 14px);
+
+  /* Flatter scaling; shorter string can be a bit larger overall */
+  font-size: clamp(1.2rem, 3.4vw, 3rem);
+  letter-spacing: 0.01em;    /* minimal extra width */
+  line-height: 1.1;
+}
+/* For screens wider than ~1440px (2/3 of 1080p width is ~1280px) */
+@media screen and (min-width: 1440px) {
+  .page-header-image-text {
+    font-size: clamp(2rem, 5.5vw, 7rem); /* was max 5.25rem, now allow up to 7rem */
+  }
+  .home-subheader {
+    font-size: clamp(1.4rem, 3.8vw, 3.5rem); /* small bump for subheader */
+  }
+}
+/*
+@media screen and (max-width: 1150px){
+    .page-header-image-text {
+        font-size: 8rem;
+    }
+    .home-subheader {
+        font-size: 3.25rem;
+        top: 74%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .page-header-image-text {
+        font-size: 6rem;
+    }
+    .home-subheader {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .page-header-image-text {
+        font-size: 4.5rem;
+    }
+    .home-subheader {
+        display: none;
+    }
+}
+*/
+.subpage-header {
+    position: absolute;
+    bottom: 15%;
+    padding: 5px 35px 5px 12vw;
+    text-align: left;
+    color: #fff;
+    background-color: rgba(0, 33, 69, 0.8);
+    font-size: 3.75vw;
+    font-family: 'Stag-Semibold', 'Open Sans', Arial, Helvetica;
+    letter-spacing: 0.2vw;
+    white-space: nowrap;
+}
+
+/*
+@media screen and (max-width: 1300px){
+    .subpage-header {
+        padding: 5px 35px 5px 5vw;
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .subpage-header {
+        display: none;
+    }
+}
+*/
+.post-header-image .subpage-header::before, .post-header-image .subpage-header-mobile::before {
+    content: 'News & Announcements';
+}
+
+.subpage-header-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    .subpage-header-mobile {
+        display: block;
+    }
+}
+
+.subpage-header-mobile-spacer {
+    display: block;
+}
+
+@media screen and (max-width: 767px){
+    .subpage-header-mobile-spacer {
+        display: none;
+    }
+}
+
+.content-columns {
+    gap: 1em;
+}
+
+.tabletest table {
+    font-size: 16px;
+}
+
+.tabletest table td {
+    vertical-align: top;
+}
+
+.table__page td:nth-child(2) br {
+    margin-top: 2rem;
+}
+
+/* ### Custom background spacer styling ### */
+
+.custom-spacer-background {
+    max-width: 100vw !important;
+    position: relative;
+    width: 100% !important;
+    background: #319b42;
+    padding: 1.5rem;
+    color: #fff;
+}
+
+/* container for text */
+.custom-spacer-container {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100%  - 4rem);
+}
+
+.custom-spacer-container h4 {
+    color: #fff;
+}
+
+.custom-spacer-container a {
+    color: #fff;
+}
+
+/* ## end spacer styling ## */
+
+.ed-message {
+    display: block;
+}
+
+.ed-message-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 782px){
+    .ed-message {
+        display: none;
+    }
+    .ed-message-mobile {
+        display: block;
+    }
+}
+
+/* ## Recent news styling ## */
+
+.recent-news a {
+    color: #002145;
+    text-decoration: none;
+}
+
+.recent-news a:hover {
+    color: #1B365D;
+}
+
+.custom-spacer-background .wp-block-latest-posts__post-excerpt, .custom-spacer-background .wp-block-latest-posts__post-author, .custom-spacer-background .wp-block-latest-posts__post-date {
+    color: #fff;
+}
+
+.custom-spacer-background .wp-block-latest-posts a {
+    color: var(--sauder-color-yellow);
+}
+
+.wp-block-latest-posts__list:not(.is-grid) li {
+    border-bottom: 1px solid #C1C6C8;
+}
+
+/* ## Recent news slider (Home page) */
+
+@keyframes tonext { /* animation -- not in use */
+    75% {
+        left: 0;
+    }
+    95% {
+        left: 100%;
+    }
+    98% {
+        left: 100%;
+    }
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes tostart {
+    75% {
+        left: 0;
+    }
+    95% {
+        left: -100%;
+    }
+    98% {
+        left: -100%;
+    }
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes snap {
+    96% {
+        scroll-snap-align: center;
+    }
+    97% {
+        scroll-snap-align: none;
+    }
+    99% {
+        scroll-snap-align: none;
+    }
+    100% {
+        scroll-snap-align: center;
+    }
+}
+
+.news-slider {
+  text-align: center;
+  overflow: hidden;
+  scroll-padding-top: 3rem;
+}
+
+.news-slider-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 699px){
+    .news-slider {
+        display: none;
+    }
+    .news-slider-mobile {
+        display: block;
+    }
+}
+
+.news-slides {
+  display: flex;
+  overflow: hidden;
+  /*overflow-x: auto;*/
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-top: 3rem;
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+
+.news-slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  max-width: 120rem;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  padding: 0 10px;
+}
+
+.news-slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #C1C6C8;
+  color: #c1c6c8;
+  font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 30px 6px 0.5rem 6px;
+  position: relative;
+}
+
+.news-slider > a:active {
+  background: #5B6770;
+  color: #5B6770;
+}
+
+.news-slider > a:hover {
+  background: #959A9C;
+  color: #959A9C;
+}
+
+.news-slide-anchor {
+    /*margin-top: 3px;*/
+    color: rgb(0, 33, 69, 0);
+    display: block;
+    position: relative;
+    top: -10rem;
+    visibility: hidden;
+}
+
+.news-slide-anchor2 {
+    display: block;
+    position: relative;
+    top: calc(-10rem - 3px);
+    visibility: hidden;
+}
+
+.news-slide-anchor3 {
+    display: block;
+    position: relative;
+    top: calc(-10rem - 5px);
+    visibility: hidden;
+}
+
+@media screen and (max-width: 864px) and (min-width: 700px){
+    .news-slide-anchor {
+        top: -15rem;
+    }
+    .news-slide-anchor2 {
+        top: calc(-15rem - 3px);
+    }
+}
+
+.news-slides .wp-block-post-title a,
+.news-slides-pinned .wp-block-post-title a,
+.news-slides-pinned-test2 .wp-block-post-title a,
+.news-slides-pinned-test3 .wp-block-post-title a {
+    color: #002145;
+    text-decoration: none;
+}
+
+.news-slides .wp-block-post-title a:hover,
+.news-slides-pinned .wp-block-post-title a:hover,
+.news-slides-pinned-test2 .wp-block-post-title a:hover,
+.news-slides-pinned-test3 .wp-block-post-title a:hover {
+    color: var(--sauder-color-blue-sky);
+    text-decoration: none;
+}
+
+.news-slides .wp-block-post-title,
+.news-slides-pinned .wp-block-post-title,
+.news-slides-pinned-test3 .wp-block-post-title {
+    margin-bottom: 1rem;
+}
+
+.news-slides-pinned-test2 .wp-block-post-title {
+    margin-bottom: 1rem;
+    font-size: 2.6rem;
+}
+
+.news-slides-pinned-test3 .wp-block-post-title a:before {
+    content: 'Pinned: ';
+}
+
+.news-slides-pinned-test2 .wp-block-post-title a:before {
+    content: url('https://blogs.ubc.ca/ubcdapsandbox/files/2023/08/pin_navy-small-e1692379093121.png');
+    padding-right: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.news-slides-pinned-test2 .wp-block-post-title a:hover::before {
+    content: url('https://blogs.ubc.ca/ubcdapsandbox/files/2023/08/pin_blue-small-e1692379124429.png');
+    transition: all 0.1s ease-in-out;
+}
+
+.news-slides li {
+    border: 1px solid #ACE1F4;
+    border-radius: 5px;
+    padding: 0 10px 4.25rem 10px;
+    background-color: rgba(172, 225, 244, 0.5);
+/* 
+    display: flex;
+ */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.news-slider-snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+.news-slides-pinned li,
+.news-slides-pinned-test3 li {
+    border: 1px solid #ACE1F4;
+    border-radius: 5px;
+    padding: 0 17px 4.25rem 17px;
+    background-color: rgba(172, 225, 244, 0.5);
+    margin: 10px;
+}
+
+.news-slides-pinned-test2 li {
+    border-left: 5px solid #00B5E2;
+    padding-left: 17px;
+    margin: 10px;
+}
+
+/*.news-slides-pinned--title {
+    position: absolute;
+    transform: translateY(-25rem)
+}*/
+    
+
+/* @media (hover: hover) {
+    .news-slider-snapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    .news-slide:last-child .news-slider-snapper {
+        animation-name: tostart, snap;
+    }
+} */
+
+/* ## end recent news */
+
+/* ## Posts & News page styling -- use in lieu of WP's settings ## */
+
+.featured-media-inner {
+    display: none;
+}
+
+
+.post__media-text-right div {
+    padding: 0 4rem 0 0 !important;    
+}
+
+.post__media-text-left div {
+    padding: 0 0 0 4rem !important;
+}
+
+.post__media-text-right, .post__media-text-left {
+    margin-top: 0 !important;
+    margin-bottom: 1em !important;
+}
+
+@media (max-width: 600px){
+    .post__media-text-right div, .post__media-text-left div {padding: 3rem 0 !important;}
+    .post__media-text-right, .post__media-text-left {
+        margin-top: 4rem !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.post-pagination__container {
+    max-width: 58rem !important;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 781px){
+    .post-pagination__container:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        flex-basis: 0 !important;
+    }
+}
+
+.post-previous-button a {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.post-previous-button a:hover {
+    text-decoration: underline;
+}
+
+.post-previous-button a:before {
+    content: '';
+    border-color: var(--sauder-color-blue-sky);
+    border-style: solid;
+    border-width: 0 0 2px 2px;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    margin-right: 15px;
+    transform: translateY(-12%) rotate(45deg);
+}
+
+.post-next-button a {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.post-next-button a:hover {
+    text-decoration: underline;
+}
+
+.post-next-button a:after {
+    content: '';
+    border-color: var(--sauder-color-blue-sky);
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    margin-left: 15px;
+    transform: translateY(-12%) rotate(45deg);
+}
+
+.post-title-link .wp-block-latest-posts__post-title:hover {
+    color: #00566E;
+}
+
+/* end styling */
+
+/* Testing news page query block customization */
+
+.news-page .wp-block-group {
+    padding: 0 0 2rem 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #ccc;
+}
+
+.news-page h3 {
+    font-size: 2rem;
+    text-decoration: none;
+    margin-bottom: 0.75rem !important;
+}
+
+.news-page h3 a {
+    text-decoration: none;
+}
+
+.news-page h3 a:hover {
+    text-decoration: underline;
+}
+
+.news-page .wp-block-post-date {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.news-page .wp-block-post-featured-image {
+    padding-left: 35px;
+}
+
+@media screen and (max-width: 782px){
+    .news-page .wp-block-post-featured-image {
+        padding-left: 0;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.news-categories {
+    --ubc-tabs-block-tab-nav-top-border-background: transparent;
+    --ubc-tabs-block-tab-nav-background: #002145; /* alt: #C1C6C8 */
+    --ubc-tabs-block-tab-nav-text-color: #fff;
+    --ubc-tabs-block-tab-nav-selected-background: #002145;
+    --ubc-tabs-block-tab-nav-selected-text-color: #fff;
+    --ubc-tabs-block-tab-nav-border-color: transparent;
+    --ubc-tabs-block-content-border-color: #c1c6c8;
+    --ubc-tabs-block-accordion-trigger-background: #002145;
+    --ubc-tabs-block-accordion-trigger-selected-background: #00B5E2;
+}
+
+.news-categories .ubc-accordion-tabs__tab-list li a[role=tab], .rights-tabs .ubc-accordion-tabs__tab-list li button[role=tab] {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.news-categories .ubc-accordion-tabs__tab-list li a[role=tab]:hover {
+    background: #1B365D;
+    opacity: 1;
+}
+
+.news-categories .ubc-accordion-tabs__tab-list {
+    flex-wrap: wrap;
+}
+
+.news-categories .ubc-accordion-tabs__tab-list li {
+    flex-grow: 1;
+}
+
+.news-categories .ubc-accordion-tabs__tabs-panel .content {
+    padding: 1.25rem 0;
+    border-style: none;
+}
+
+.news-categories-buttons > .wp-block-button:last-child {
+    margin-left: unset;
+}
+
+.news-categories-buttons .wp-block-button__link {
+    padding: 1.1em 3.5rem;
+}
+
+.news-categories-buttons {
+    gap: 0.25em !important;
+}
+
+.news-categories-buttons__selected {
+    background: #002145;
+}
+
+.news-categories-buttons__selected .wp-block-button__link {
+    color: #fff;
+    background: #002145;
+    transition: all 0.15s ease-in-out;
+}
+    
+.news-categories-buttons__unselected {
+    background: #7f90a2;
+}
+
+.news-categories-buttons__unselected .wp-block-button__link {
+    color: #fff;
+    background: #7f90a2;
+    transition: all 0.15s ease-in-out;
+}
+
+.news-categories-buttons__selected .wp-block-button__link:hover, .news-categories-buttons__unselected .wp-block-button__link:hover {
+    text-decoration: none;
+    background: #1B365D;
+    transition: all 0.15s ease-in-out;
+}
+
+
+
+/* Page & Post Categories block - using in lieu of theme categories --------- */
+
+.page-post-categories {
+    padding-top: 1px;
+    }
+
+.page-post-categories::before {
+    content:"Categories:  "; 
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.page-post-categories a {
+    font-size: 1rem;
+    text-decoration: none;
+}
+.page-post-categories a:hover {
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+
+
+/* Do not display the categories built in to the theme */
+.entry-categories {
+    display: none;
+}   
+
+
+.tag-external .entry-title {
+    color: #00B5E2;
+}
+
+.external-post {
+    padding: 4rem 3rem 4rem 3rem;
+    background-color: #E3E7E8;
+    border-radius: 5px;
+}
+
+.external-post td {
+    border-color: #5b6770;
+}
+
+.external-post-2 {
+    padding: 4rem 3rem 4rem 3rem;
+    border: 4px dotted #1b365d;
+    border-radius: 10px;
+}
+    
+.external-post-3 {
+    border-left: 4px solid #00B5E2;
+    padding: 2rem 0 2rem 4rem;
+}
+
+/* Post page changes */
+.entry-header {
+    font-family: 'Stag-Semibold', 'Open Sans', Arial, Helvetica;
+    font-size: 2.55rem;
+    letter-spacing: .03rem;
+    
+    }
+    
+.entry-header h1 {
+    letter-spacing: 0.03rem;
+    font-size: 5rem;
+}
+
+.post-meta-wrapper {
+    margin-top: 3rem;
+}
+
+.entry-header .post-meta .meta-text {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .03rem;
+    margin-bottom: 4rem;
+    color: var(--sauder-color-grey-dark);
+    }
+
+
+.pagination-single {display: none;} /* hide links to next and prev posts*/
+.post-date .meta-icon {display: block; margin-bottom: 4rem;} /* Hide icon beside date */
+.post-date .meta-text:before {content: "Last updated:";} /* Add text before updated date */
+
+.post-meta .post-author {display: none;} /* Hide post author */
+.post-meta .post-author .meta-icon {display: block;margin-bottom: 4rem;} /* Hide post author icon */
+.post-meta .post-categories {display: block}
+
+
+/*.post-meta .post-comment-link {display: block;margin-bottom: 4rem;}*/ /* Hide # of comments*/ 
+.post-comment-link .meta-icon {margin-bottom: 4rem;} /* Comment icon */
+
+.comments-wrapper {display: block;} /* hide comments section juist in case it is left on for indiv. posts*/
+
+.post-meta-wrapper.post-meta-single-bottom {margin-top: 0;} /* decreases space between tags and categories at bottom of posts */
+
+/* post categories customization */
+
+.post .taxonomy-category.wp-block-post-terms::before {
+    content: url('https://blogs.ubc.ca/ubcdapsandbox/files/2022/08/categories-e1660337199736.png');
+    padding-right: 10px;
+    position: absolute;
+    transform: translate(-31px, 1px);
+    filter: brightness(0.8);
+}
+
+.post .taxonomy-category.wp-block-post-terms {
+    max-width: 58rem !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+    padding-left: 30px;
+}
+
+.post .taxonomy-category a {
+    color: #6d6d6d;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.post .taxonomy-category a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px){
+    .post .taxonomy-category a {
+        font-size: 15px;
+    }
+}
+
+.post .entry-header {margin-top: 36%;} /* places meta below header image */
+.search .post .entry-header {margin-top: 0;}
+
+@media (max-width: 600px){
+    .post .entry-header {
+        margin-top: 18rem;
+    }
+}
+
+.post .entry-content {font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;margin-top: 5rem;} /* fixing spacing issue between title and content*/
+
+.post h1.entry-title {
+    margin-top: 8rem;
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.singular .intro-text {
+    display: none; 
+}
+
+
+.comment-reply-title {
+    font-size: 3.2rem !important;
+}
+
+.comments-wrapper hr.styled-separator {
+    display:none;
+}
+
+.comment-respond {
+    padding-top: 8rem;
+    margin-top: 8rem;
+    border-top: 1px solid #ddd;
+}
+    
+
+/* ### end ###Post page changes */
+
+/*... #### Mobile Phones Portrait or Landscape #### */
+
+.entry-content {
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.entry-content .wp-block-columns h2{margin-bottom: 3rem;}
+
+.entry-content p {
+    font-family: 'Open Sans', Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+
+.entry-content h2 {
+    font-family: 'Stag-Medium-Web', 'Open-Sans';
+    letter-spacing: 0.3rem;
+}
+
+@media screen and (max-width: 700px){
+    .entry-content h2, 
+    .entry-content h3, 
+    .entry-content h4, 
+    .entry-content h5, 
+    .entry-content h6 {
+        letter-spacing: normal;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .wrap_responsibilities {
+        font-size: 40px !important;
+    } /* fixes the title wrap Rights and Responsibilities page */
+    .wrap_requirements {
+        font-size: 48px !important;
+    }  /* fixes title wrap on pages that have "Requirements" in title */
+}
+
+
+/* #### Breadcrumb Trail #### */
+
+ul.breadcrumb {
+  list-style-type: none !important;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 1.25rem;
+  list-style-type: none;
+  margin-left: 0.3rem;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #319B42;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+/* breadcrumb for posts */
+ul.breadcrumb-post {
+  list-style-type: none !important;
+  margin-bottom: 4rem;
+}
+ul.breadcrumb-post li {
+  display: inline;
+  font-size: 1.25rem;
+  list-style-type: none;
+  margin-left: 0.3rem;
+}
+ul.breadcrumb-post li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb-post li a {
+  color: #319B42;
+  text-decoration: none;
+}
+ul.breadcrumb-post li a:hover {
+  text-decoration: underline;
+}
+
+/* #### Accordions styled for template ####*/
+.sauder-accordion .c-accordion__title {
+    font-family: 'Stag-Medium-Web', 'Open Sans', Arial;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-left: 15px;
+    padding-right: 25px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    letter-spacing: .06rem;
+    color: #fff;
+    background: linear-gradient(to right, var(--sauder-color-green-dark-65K),var(--sauder-color-green-dark));
+    }
+
+.c-accordion__title {
+    margin: 1rem auto 3rem !important;
+}
+
+.sauder-accordion .c-accordion__title:hover{
+    background: linear-gradient(to right, var(--sauder-color-green-dark),var(--sauder-color-green));
+    }
+
+.sauder-accordion-tech-page .c-accordion__title {
+    font-family: 'Stag-Medium-Web', 'Open Sans', Arial;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-left: 15px;
+    padding-right: 25px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    letter-spacing: .06rem;
+    color: #fff;
+background: linear-gradient(to right, var(--sauder-color-blue-dark),var(--sauder-color-blue-light)) !important;
+}
+
+.sauder-accordion-tech-page .c-accordion__title:hover {
+    background: linear-gradient(to right, var(--sauder-color-blue-light),var(--sauder-color-blue-sky)) !important;
+
+}
+
+.sauder-accordion .c-accordion__title::after {
+    font-weight: 800;
+    padding-right: 30px;
+    color: #fff
+}
+
+.sauder-accordion-tech-page .c-accordion__title::after {
+    font-weight: 800;
+    padding-right: 30px;
+    color: #fff
+}
+
+.sauder-accordion .c-accordion__item iframe{
+    width: 100% !important;    
+}
+
+.c-accordion__content {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.c-accordion__content p {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 15px;
+}
+
+.c-accordion__content h5 {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.sauder-accordion-content {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 15px;
+}
+
+.c-accordion__item .wp-block-column > :first-child {
+    margin-top: -0.5rem;
+}
+
+/* #### end accordion styline */
+
+/* ### FAQ accordion ### */
+
+.faq-accordion-tech-page .c-accordion__title {
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    padding: 15px 70px 15px 20px;
+    letter-spacing: normal;
+    color: #002145;
+    border: 1px solid #002145;
+    transition-duration: 0.2s;
+}
+
+.faq-accordion-tech-page .c-accordion__title:hover {
+    background: #002145;
+    color: #fff;
+}
+
+.faq-accordion-tech-page .c-accordion__title::after {
+    font-weight: 400;
+    padding-right: 30px;
+    color: #002145;
+    font-size: 3rem;
+}
+
+.faq-accordion-tech-page .c-accordion__title:hover::after {
+    color: #fff;
+}
+
+.faq-accordion .c-accordion__item iframe{
+    width: 100% !important;    
+}
+
+.faq-accordion-content {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 15px;
+}
+
+/* ### end FAQ accordion */
+
+/* ### Subaccordion within accordion ## */
+
+.subaccordion .c-accordion__title {
+    max-width: 95%;
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 15px 70px 10px 0;
+    letter-spacing: normal;
+    color: #002145;
+    border-style: none none solid none;
+    border-width: 2px;
+    transition-duration: 0.2s;
+}
+
+.subaccordion .c-accordion__title:hover {
+    color: #00B5E2;
+    background: #fff;
+    border-color: #00B5E2;
+}
+
+.subaccordion .c-accordion__title::after {
+    content: url("https://blogs.ubc.ca/ubcdapsandbox/files/2022/07/arrow-2.png");
+    transition-duration: 0.2s;
+    padding-right: 10px;
+}
+
+.subaccordion .c-accordion__title:hover::after {
+    content: url("https://blogs.ubc.ca/ubcdapsandbox/files/2022/07/arrow-2_hover.png");
+    transition-duration: 0.2s;
+}
+
+.subaccordion.is-open .c-accordion__title::after {
+    transform: rotate(90deg);
+    transform-origin: 15px 10px;
+}
+
+.subaccordion .c-accordion__content p {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+
+/* #### Side subpage navigation menu template #### */
+
+.subpage-menu-container {
+    font-family: 'Open Sans', Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fff;
+    font-size: 16px;
+    border-left: 1px solid #A6A6A6;
+    border-right: 1px solid #A6A6A6;
+    box-shadow: 1px 1px 2px 0 #CCCCCC;
+}
+
+.subpage-menu-container a:link {
+    text-decoration: none;
+    display: block;
+}
+
+.subpage-menu {
+    color: #002145;
+    font-weight: 400;
+    line-height: 2.0;
+}
+
+.subpage-menu-link {
+    color: #002145;
+    padding: 20px;
+    line-height: 2.0;
+    border-bottom: 1px solid #A6A6A6;
+}
+
+.subpage-menu-link:hover {
+    background: #EDEDED;
+}
+
+.subpage-menu-header {
+    background: #002145;
+    color: #fff;
+    padding: 20px;
+    font-weight: 700;
+    line-height: 2.0;
+}
+
+.subpage-menu-header-link {
+    color: #fff;
+    padding: 20px;
+    font-weight: 700;
+    line-height: 2.0;
+}
+
+.subpage-menu-header-link:hover {
+    background: #23476E;
+}
+
+.subpage-menu-current {
+    font-weight: bold;
+    line-height: 2.0;
+    background: #EDEDED;
+}
+
+/* ### end subpage menu customization ### */
+
+.remove-margin {
+    margin: 0;
+}
+
+.remove-margin-top {
+    margin-top: 0 !important;
+}
+
+.remove-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.add-padding {
+    padding: 20px;
+}
+
+.add-border-green {
+    border: 1px solid #319B42;
+}
+
+/* #### Quick nav links on homepage #### */
+
+.quicknav-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+}
+
+.quicknav-item {
+    background: #fff;
+    border: 2px solid #002145;
+    margin: 5px;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    color: #002145;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Open Sans', Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 2.25rem;
+}
+
+.quicknav-item img {
+    height: 60px;
+}
+
+.quicknav-item div {
+    flex-grow: 2;
+}
+
+.quicknav-item:hover {
+    color: #fff;
+    background: #002145;
+}
+
+.quicknav-item:hover img {
+    filter: brightness(100);
+}
+
+@media screen and (max-width: 900px){
+    .quicknav-container {
+        display:grid;
+        grid-template-columns: 50% 50%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .quicknav-container {
+        display:grid;
+        grid-template-columns: auto;
+        padding: inherit;
+    }
+}
+
+/* ## end quick nav styling ## */
+
+/* #### Highlight box customization -- identify as class in custom html block ### */
+
+.highlight-box-full {
+    background: #002145;
+    color: #fff;
+    padding: 15px 70px 45px 70px;
+    box-shadow: 1px 1px 2px 0 #cccccc;
+}
+
+.highlight-box-full-icon {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    padding: 15px 50px 40px 50px;
+}
+
+.highlight-box-full-icon img {
+    margin-top: 4.5rem;
+    height: 75px;
+    width: 75px;
+}
+
+.highlight-box {
+    background: #002145;
+    color: #fff;
+    padding: 40px 45px;
+    box-shadow: 1px 1px 2px 0 #cccccc;
+}
+
+.highlight-box-icon {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.highlight-box-icon img {
+    height: 75px;
+    width: 75px;
+}
+
+.highlight-box h5 {
+    color: #fff;
+    margin-top: 0 !important;
+}
+
+.highlight-box p {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.highlight-box a, .highlight-box-full a, highlight-box h4, highlight-box-full h4 {
+    color: #fff;
+}
+
+.highlight-box ol,
+.highlight-box ul,
+.highlight-box-full ol,
+.highlight-box-full ul {
+    margin-bottom: 0;
+}
+
+.highlight-box .dap-button-alt {
+    background: #002145;
+    border: 2px solid #fff;
+    box-shadow: none;
+}
+
+.highlight-box .dap-button-alt a:hover {
+    color: #002145;
+}
+	
+.highlight-box .dap-button-alt:hover {
+	background: #fff;
+}
+
+.highlight-box .dap-button-alt a {
+    color: #fff;
+}
+
+@media screen and (max-width: 767px){
+    .highlight-box-full {
+        padding: 15px 50px 35px 50px;
+    }
+    .highlight-box {
+        padding: 30px 35px;
+    }
+}
+
+/* ## end highlight box customization ## */
+
+.icons_ppw { /* icon size on Program Planning Workshop page */
+    width: 45%;
+    opacity: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 781px){
+    .icons_ppw {
+        width: 110px;
+    }
+}
+
+.icontext_ppw {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ### Text-icon block customization ### */
+
+.text-icon__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    row-gap: 75px;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding: 50px;
+    background: #ccc;*/
+}
+
+.text-icon {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.text-icon img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+
+.text-icon p {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* ## Text-icon bullets - 2 columns ## */
+
+.icon-bullets {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-bullets__icon {
+    width: 60px;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+.icon-bullets p {
+    /*padding-left: 10px;*/
+}
+
+.icon-bullets-test {
+    justify-content: center;
+    row-gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-bullets__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    row-gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 900px){
+    .icon-bullets__container {
+        display: none;
+    }
+    .icon-bullets {
+        padding: 30px 50px;
+    }
+}
+
+.icon-bullets__container-mobile {
+    display: block;
+}
+
+@media screen and (min-width: 900px){
+    .icon-bullets__container-mobile {
+        display: none;
+    }
+}
+
+/* ## Text-image block customization ## */
+
+.text-image__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    row-gap: 30px;
+    max-width: 62rem;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding: 50px;
+    background: #ccc;*/
+}
+
+.text-image {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-image p {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.text-image-mobile__container {
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .text-image-mobile__container {
+        display: block;
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .text-image__container {
+        display: none;
+    }
+}
+
+.text-image-mobile p {
+    font-weight: 600;
+    margin-bottom: 6.5rem;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.text-image-mobile img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ### DAP Button customization -- identify as class in custom html block ### */
+
+.dap-button {
+    background: #319B42;
+	border: none;
+	border-radius: 5rem;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+    position: relative;
+	font-size: 1.75rem;
+	font-weight: 500;
+	line-height: 1.25;
+	padding: 1.5rem 3.5rem;
+	text-align: center;
+	text-decoration: none;
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    box-shadow: 1px 1px 3px 0.65px #ebebeb;
+    transition: 0.2s;
+	/* transition: opacity 0.15s linear; */
+}
+	
+.dap-button:hover {
+	background: #002145;
+}
+
+.dap-button-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dap-button-alt {
+    background: #fff;
+    border: 2px solid #002145;
+	border-radius: 5rem;
+	color: #002145;
+	cursor: pointer;
+	display: inline-block;
+    position: relative;
+	font-size: 1.75rem;
+	font-weight: 500;
+	line-height: 1.25;
+	padding: 1.5rem 0;
+	text-align: center;
+	text-decoration: none;
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    box-shadow: 1px 1px 3px 0.65px #ebebeb;
+    transition: 0.2s;
+	/* transition: opacity 0.15s linear; */
+}
+
+.dap-button-alt a:hover {
+    color: #fff;
+}
+	
+.dap-button-alt:hover {
+	background: #002145;
+}
+
+.dap-button-alt a {
+    color: #002145;
+    text-decoration: none;
+    padding: 1.6rem 3.5rem;
+}
+
+/*.dap-button-link-alt {
+    color: #319B42;
+    text-decoration: none;
+    padding: 1.6rem 3.5rem;
+}*/
+
+/* .dap-button-link-alt:hover {
+    color: #fff;
+} */
+
+/* ## Call-to-action styling ## */
+
+.button__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.button__container p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.call-to-action__text {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+/* CTA box */
+
+.call-to-action__container {
+    background: #002145;
+    color: #fff;
+    padding: 35px 40px;
+    box-shadow: 1px 1px 2px 0 #cccccc;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+}
+
+.call-to-action__container .call-to-action__text {
+    color: #fff;
+    font-size: 21px !important;
+}
+
+.call-to-action__container .dap-button-alt {
+    background: #002145;
+    border: 2px solid #fff;
+    box-shadow: none;
+}
+
+.call-to-action__container .dap-button-alt a:hover {
+    color: #002145;
+}
+    
+.call-to-action__container .dap-button-alt:hover {
+	background: #fff;
+}
+
+.call-to-action__container .dap-button-alt a {
+    color: #fff;
+}
+
+
+/* ## end call to action styling ## */
+
+/* ## PDF button styling ## */
+
+.pdf-button { /* delete this version */
+    font-weight: bold;
+    color: #002145;
+    text-decoration: none;
+    border: 1px solid #002145;
+    border-radius: 2rem;
+    padding: 10px 25px;
+}
+
+.pdf-button::after {
+    content: '';
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.pdf-button:hover {
+    background: #C1C6C8;
+}
+
+.pdf-link {
+    color: #319b42;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 35px;
+    transition: all 0.1s ease-in-out;
+}
+
+.pdf-link::after {
+    content: url('https://blogs.ubc.ca/ubcdapsandbox/files/2022/07/dl-icon-1-e1656967147596.png');
+    padding-left: 10px;
+    position: absolute;
+    transform: translateY(2px);
+    transition: all 0.1s ease-in-out;
+}
+
+.pdf-link:hover {
+    color: #004B1A;
+}
+
+.pdf-link:hover::after {
+    content: url('https://blogs.ubc.ca/ubcdapsandbox/files/2022/07/dl-icon_hover-e1656967369385.png');
+    transition: all 0.1s ease-in-out;
+}
+
+.highlight-box .pdf-link {
+    color: #319b42;
+    transition: all 0.1s ease-in-out;
+}
+
+.highlight-box .pdf-link:hover::after {
+    content: url('https://blogs.ubc.ca/ubcdapsandbox/files/2022/07/dl-icon-box__hover-e1656968484325.png');
+    transition: all 0.1s ease-in-out;
+}
+
+.highlight-box .pdf-link:hover {
+    color: #B2D7B0;
+    transition: all 0.1s ease-in-out;
+}
+
+.pdf-link-block a {
+    color: #319b42;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 35px;
+    transition: all 0.1s ease-in-out;
+}
+
+.pdf-link-block a::after {
+    content: url('https://blogs.ubc.ca/ubcdapsandbox/files/2022/07/dl-icon-1-e1656967147596.png');
+    padding-left: 10px;
+    position: absolute;
+    transform: translateY(2px);
+    transition: all 0.1s ease-in-out;
+}
+
+.pdf-link-block a:hover {
+    color: #004B1A;
+}
+
+.pdf-link-block a:hover::after {
+    content: url('https://blogs.ubc.ca/ubcdapsandbox/files/2022/07/dl-icon_hover-e1656967369385.png');
+    transition: all 0.1s ease-in-out;
+}
+
+/* FacetWP styling site specific - other styles are specified in facet settings -------- */
+
+[data-name="tags_facet"] {
+    display:grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(auto-fill, 100px);
+    font-weight: 400;
+    font-size: 1.0rem;
+    text-align: left;
+    color: var(--sauder-color-grey-dark);
+}
+
+[data-name="tags_facet"] .facetwp-overflow{
+    line-height:22rem;
+}
+
+.facetwp-facet-tags_facet::before {
+    content: "Filter by Tags:  ";
+    font-weight: 600;
+}
+
+.facetwp-facet-tags_facet .facetwp-link {
+background-color:#eee;
+border: 1px solid #ccc;
+line-height: 200%;
+padding:0 0 0 5px;
+}
+
+.facetwp-facet-tags_facet .facetwp-link .facetwp-counter {
+background-color: var(--sauder-color-green-dark-40K);
+position: relative;
+padding:3px;
+float:right;
+}
+
+.facetwp-facet-tags_facet .facetwp-link:hover {
+    text-decoration: underline;
+}
+
+
+.facetwp-facet-categories {
+
+}
+
+.facet-video-template-categories{
+}
+
+
+/* Video-template Facet link */
+.el-god4hj a {
+    text-decoration: none;
+    font-weight: 600;
+}
+/* Video-template Facet link on hover */
+.el-god4hj a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* facet with name categories */
+[data-name="categories"]::before {
+    content: "Filter by Category: ";
+    font-weight: 600;
+}
+
+[data-name="categories"] {
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--sauder-color-grey-dark);
+}
+
+
+/* #### end. FacetWP styling site specific --------------------------------- */
+
+
+/*.ubc-wp-vote__star-rating {
+    font-family: Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.5rem;
+}
+
+.ubc-wp-vote__star-rating p {
+    font-family: Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.5rem;
+}
+
+.ubc-wp-vote_star_rating--current > *{
+    scale: 85%;
+}
+
+.ubc-wp-vote__star-rating--overall {
+    background: grey;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: none;
+}*/
+
+
+.powered-by-wordpress {
+    display: none;
+}
+
+.widget-content {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: -2rem;
+}
+
+.widget-content ul {
+     list-style-type: none;
+}
+
+.widget-content a {
+    text-decoration: none;
+}
+
+.widget-content a:hover {
+    border-bottom: 1px dotted #c1c6c8;
+    color: var(--sauder-color-blue-sky-40K);
+}
+
+.widget-content li {
+    line-height: 1.4;
+    }
+
+.footer-widgets-outer-wrapper {
+    border-bottom: 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.footer-text {
+    color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.65;
+}
+
+#site-footer {
+    background-color: #002145;
+    border-color: #002145 !important;
+}
+
+.footer-copyright {
+    content: "Copyright UBC Sauder School of Business";
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.footer-copyright::after {
+    content: "Copyright UBC Sauder School of Business";
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.to-the-top {
+    display: none;
+    content: "Copyright UBC Sauder School of Business";
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    text-decoration: none;
+}
+.to-the-top:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+#akismet-credit-insert {
+    display: none;
+}
+
+.footer-nav-widgets-wrapper {
+    background: linear-gradient(90deg,#004b1a 0%,#319b42 100%);
+    border-color: #004b1a !important;
+}
+
+/* Rich Testing */
+body.search.search-results .page .entry-title {
+    display: block;
+}
+
+/* search results page changes */
+body.search.search-results h2 {
+    font-family: 'Stag-Medium-Web', 'Open-Sans';
+    font-size: 4rem;
+    letter-spacing: .2rem;
+    }
+
+body.search.search-results h2 a {
+    color: var(--sauder-color-green-65K);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--sauder-color-green-65K);
+}
+
+body.search.search-results h2 a:hover {
+    color: var(--sauder-color-green-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--sauder-color-green-dark);
+}
+
+.search-results .entry-content p:before {
+    content: "[Excerpt]  ";
+    color: var(--sauder-color-green-dark);
+}
+
+/* ### end ### search results page changes*/
+
+
+/* Sub-accordion for inside accordions */
+/* Only testing purposes */
+.sauder-subaccordion{
+    color: var(--sauder-color-blue-dark);
+    background-color: #FFFFFF !important;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+    padding-left: 30px;
+    margin-left: 50px;
+}
+
+.active, .sauder-subaccordion:hover{
+    color: black;
+}
+
+.sauder-subacc-content{
+    padding: 10px;
+    padding-left: 10px;
+    margin-left: 50px;
+    display: none;
+    overflow: hidden;
+}
+
+.sauder-subaccordion:after{
+    content: '\02975' ; /*plus sign*/
+    float: right;
+}
+/*
+.active:after{
+    content: '\02976' ; /*minus sign
+}*/
+
+.subacc-links{
+    margin-left: 50px;
+    padding-left: 30px;
+}
+
+/* block-file download button */
+
+.wp-block-file
+{
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.wp-block-file__button {
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #002145;
+}
+
+button, .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"], .bg-accent, .bg-accent-hover:hover, .bg-accent-hover:focus, :root .has-accent-background-color, .comment-reply-link {
+    background-color:#002145;
+}
+
+.wp-block-file__button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.wp-block-file__button:hover {
+  background-color: #008CBA;
+}
+
+.wp-block-ubc-tab iframe {
+    width: 1200px !important;
+    max-width: 100%;
+}
+
+/* ### end ### block-file download button */
+
+/* Custom for the Sauder template by Catherine */
+.cover-header .entry-header * {
+   text-shadow: 2px 2px 4px #000000 !important;
+}
+
+.overlay-header #site-header
+  background-color: #fff !important;
+}
+
+.primary-menu a {
+    color: #1B365D !important;
+}
+
+body:not(.home) .page .entry-title {
+display: block !important;
+}
